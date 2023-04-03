@@ -4,6 +4,7 @@
     <title>Заголовок страницы</title>
     <link rel="stylesheet" href="libs/fontawesome/all.css">
     <style>
+      .fa-expand,
       .fa-volume-off,
       .fa-volume-up,
       .fa-pause,
@@ -13,6 +14,7 @@
        line-height: 1.5;
        padding: 5px;
       }
+      .js-fullscreen-button,
       .js-volume-button,
       .js-mute-button,
       .js-play-button,
@@ -36,6 +38,11 @@
       }
       .panel {
         background-color: black;
+        display: flex;
+        flex-direction: row;
+      }
+      .empty {
+        flex-grow: 1;
       }
      </style>
   </head>
@@ -54,6 +61,10 @@
         </button>
         <button class="js-volume-button" hidden>
           <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
+        <div class="empty"></div>
+        <button class="js-fullscreen-button">
+          <i class="fa-solid fa-expand"></i>
         </button>
       </div>
     </div>
