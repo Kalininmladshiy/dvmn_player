@@ -11,21 +11,15 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="libs/fontawesome/all.css">
     <style>
-      .expand,
-      .volume-off,
-      .volume-up,
-      .pause,
-      .play {
-       color: white;
-       font-size: 150%;
-       line-height: 1.5;
-       padding: 5px;
-      }
       .player-button {
         border-style: none;
         cursor: pointer;
         background-color: transparent;
         margin-left: 7px;
+        color: white;
+        font-size: 150%;
+        line-height: 1.5;
+        padding: 5px;
       }
       .container {
         width: 100%;
@@ -54,20 +48,20 @@
       <div class="js-video-container container"></div>
       <div class="panel">
         <button class="js-play-button player-button">
-          <i class="fa-sharp fa-solid fa-play play"></i>
+          <i class="fa-sharp fa-solid fa-play"></i>
         </button>
         <button class="js-pause-button player-button" hidden>
-          <i class="fa fa-pause pause" aria-hidden="true"></i>
+          <i class="fa fa-pause" aria-hidden="true"></i>
         </button>
         <button class="js-mute-button player-button" hidden>
-          <i class="fa fa-volume-up volume-up" aria-hidden="true"></i>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
         <button class="js-volume-button player-button" hidden>
-          <i class="fa fa-volume-off volume-off" aria-hidden="true"></i>
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
         </button>
         <div class="empty"></div>
         <button class="js-fullscreen-button player-button">
-          <i class="fa-solid fa-expand expand"></i>
+          <i class="fa-solid fa-expand"></i>
         </button>
       </div>
     </div>
