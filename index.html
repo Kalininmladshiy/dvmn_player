@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="libs/fontawesome/all.css">
     <style>
-      .player-button {
+      .player-button-volume,
+      .player-button-screen,
+      .player-button-pause,
+      .player-button-play {
         border-style: none;
         cursor: pointer;
         background-color: transparent;
@@ -26,10 +29,11 @@
         height: 64px;
         width: 37px;
       }
-      .volume {
+      .vp-volume-up,
+      .vp-volume-off {
         font-size: 16px;
       }
-      .container {
+      .vp-container {
         flex-grow: 1;
         height: 558px;
       }
@@ -40,7 +44,7 @@
         width: 800px;
         height: 600px;
       }
-      .panel {
+      .vp-panel {
         background-color: black;
         display: flex;
         flex-direction: row;
@@ -55,20 +59,20 @@
         flex-direction: row;
         align-items: center;
       }
-      .progress {
+      .video-progress {
         background-color: black;
         flex-grow: 1;
         margin: 10px;
         display: flex;
         align-items: center;
       }
-      .progress-slider {
+      .video-progress-slider {
         background-color: #f8104d;
         border-radius: 30px;
         height: 5px;
         margin-right: -10px;
       }
-      .dot {
+      .vp-dot {
         display: flex;
         height: 8px;
         width: 8px;
@@ -82,7 +86,7 @@
         transition-duration: 300ms;
         transition-timing-function: ease-in;
       }
-      .progress:hover .dot {
+      .video-progress:hover .vp-dot {
         opacity: 1;
         transition-duration: 300ms;
         transition-timing-function: ease-out;
@@ -91,29 +95,29 @@
   </head>
   <body>
     <div id="player" class="player">
-      <div class="js-video-container container"></div>
-      <div class="panel">
-        <button class="js-play-button player-button">
+      <div class="js-video-container vp-container"></div>
+      <div class="vp-panel">
+        <button class="js-play-button player-button-play">
           <i class="fa-sharp fa-solid fa-play"></i>
         </button>
-        <button class="js-pause-button player-button" hidden>
+        <button class="js-pause-button player-button-pause" hidden>
           <i class="fa fa-pause" aria-hidden="true"></i>
         </button>
-        <button class="js-mute-button player-button volume" hidden>
+        <button class="js-mute-button player-button-volume vp-volume-up" hidden>
           <i class="fa-sharp fa-solid fa-volume-up" aria-hidden="true"></i>
         </button>
-        <button class="js-volume-button player-button volume" hidden>
+        <button class="js-volume-button player-button-volume vp-volume-off" hidden>
           <i class="fa-sharp fa-solid fa-volume-off" aria-hidden="true"></i>
         </button>
         <div class="video_time">
           <span class="js-current-time"></span>
-            <div class="js-progress progress">
-              <div class="js-progress-slider progress-slider"></div>
-              <div class="dot"></div>
+            <div class="js-progress video-progress">
+              <div class="js-progress-slider video-progress-slider"></div>
+              <div class="vp-dot"></div>
             </div>
           <span class="js-duration"></span>
         </div>
-        <button class="js-fullscreen-button player-button">
+        <button class="js-fullscreen-button player-button-screen">
           <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
         </button>
       </div>
