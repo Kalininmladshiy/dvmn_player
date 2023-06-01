@@ -1,0 +1,75 @@
+.player-button-volume,
+.player-button-screen,
+.player-button-pause,
+.player-button-play {
+    border-style: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    height: 44px;
+    width: 37px;
+}
+.vp-volume-up,
+.vp-volume-off {
+    font-size: 16px;
+}
+.vp-container {
+    height: 558px;
+}
+.player {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgba(0,0,0);
+    width: 800px;
+    height: 600px;
+}
+.vp-panel {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+}
+.video_time {
+    color: white;
+    flex-grow: 1;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.video-progress {
+    background-color: black;
+    flex-grow: 1;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+.video-progress-slider {
+    background-color: #f8104d;
+    border-radius: 30px;
+    height: 5px;
+    margin-right: -10px;
+}
+.vp-dot {
+    display: flex;
+    height: 8px;
+    width: 8px;
+    background-color: #f8104d;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 0 0 3px 2px rgba(0,0,0);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+.video-progress:hover .vp-dot {
+    opacity: 1;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+}
