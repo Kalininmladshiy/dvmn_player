@@ -47,6 +47,7 @@
     margin: 10px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .video-progress-slider {
     background-color: #f8104d;
