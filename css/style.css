@@ -1,7 +1,4 @@
-.player-button-volume,
-.player-button-screen,
-.player-button-pause,
-.player-button-play {
+.player-button {
     border-style: none;
     cursor: pointer;
     background-color: transparent;
